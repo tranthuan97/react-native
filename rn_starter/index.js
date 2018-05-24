@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import news from './createnew';
+import nav from './nav';
 
-AppRegistry.registerComponent('rn_starter', () => news);
+AppRegistry.registerComponent('rn_starter', () => nav);

@@ -11,7 +11,7 @@ import {
     TouchableOpacity,
 } from 'react-native';
 
-export default class girl extends Component {
+export default class nav extends Component {
     render(){
         return(
             <View style={[this.styles.container,{flex:1}]}>

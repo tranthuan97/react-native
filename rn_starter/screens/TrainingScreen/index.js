@@ -20,7 +20,6 @@ export default class TrainingScreen extends React.Component {
             data: ['Hello world 1']
         };
     }
-
     onPress(e) {
         this.setState({ visible: !this.state.visible });
     }
@@ -40,13 +39,13 @@ export default class TrainingScreen extends React.Component {
         this.setState({ data: newData });
     }
 
-    renderItem({ item, index }) {
-        return (
-            <View style={{ padding: 10 }}>
-                <Text>{item}</Text>
-            </View>
-        )
-    }
+    // renderItem({ item, index }) {
+    //     return (
+    //         <View style={{ padding: 10 }}>
+    //             <Text>{item}</Text>
+    //         </View>
+    //     )
+    // }
 
     render() {
         return (
@@ -84,7 +83,8 @@ export default class TrainingScreen extends React.Component {
                     data={this.state.data}
                     extraData={this.state}
                     keyExtractor={(item, index) => index.toString()}
-                    renderItem={this.renderItem.bind(this)}
+                    // renderItem={this.renderItem.bind(this)}
+                    enderItem={({item}) => <View style={{ padding: 10 }}><Text>{item}</Text></View>} 
                     refreshControl={<RefreshControl refreshing={false} />}
                     refreshing={true}
                 />

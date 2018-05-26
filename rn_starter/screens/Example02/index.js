@@ -32,6 +32,10 @@ export default class ExampleScreen02 extends React.Component {
         })
     }
 
+    onPress(command){
+        this.setState({numb:this.state.numb + (command == 'INCREASE'?1:-1)})
+    }
+
     render() {
         return (
             <View  style={styleSheet.common.container}>
@@ -46,11 +50,11 @@ export default class ExampleScreen02 extends React.Component {
                         <View style={styleSheet.Body.containerInside}>
                             <View style={styleSheet.Body.BodyTop}><Text style={styleSheet.Body.Text}>Beds</Text></View>
                             <View style={styleSheet.Body.BodyItem}>
-                                <TouchableHighlight onPress={this.onChangeMinusNumb.bind(this)} style={styleSheet.Body.Items}>
+                                <TouchableHighlight onPress={this.onPress.bind(this, 'DECREASE')} style={styleSheet.Body.Items}>
                                     <MCI_Icon name="minus" size={20} color="#ff7979"/>
                                 </TouchableHighlight>
                                 <View  style={styleSheet.Body.Items}><Text style={styleSheet.Body.Number}> {this.state.numb} </Text></View>
-                                <TouchableHighlight onPress={this.onChangePlusNumb.bind(this)}  style={styleSheet.Body.Items}>
+                                <TouchableHighlight onPress={this.onPress.bind(this, 'INCREASE')}  style={styleSheet.Body.Items}>
                                     <MCI_Icon name="plus" size={20} color="#ff7979"/>
                                 </TouchableHighlight>
                             </View>

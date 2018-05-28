@@ -17,7 +17,8 @@ export default class ExampleScreen02 extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            numb: 0
+            numb: 0,
+            color: 'red'
         }
     }
 
@@ -36,6 +37,12 @@ export default class ExampleScreen02 extends React.Component {
         this.setState({numb:this.state.numb + (command == 'INCREASE'?1:-1)})
     }
 
+    onChangeColor = () => {
+        this.setState({
+            color: this.state.color == 'red' ? 'blue' : 'red'
+        })
+    }
+
     render() {
         return (
             <View  style={styleSheet.common.container}>
@@ -51,7 +58,7 @@ export default class ExampleScreen02 extends React.Component {
                             <View style={styleSheet.Body.BodyTop}><Text style={styleSheet.Body.Text}>Beds</Text></View>
                             <View style={styleSheet.Body.BodyItem}>
                                 <TouchableHighlight onPress={this.onPress.bind(this, 'DECREASE')} style={styleSheet.Body.Items}>
-                                    <MCI_Icon name="minus" size={20} color="#ff7979"/>
+                                    <MCI_Icon name="minus" size={20} color={this.state.color}/>
                                 </TouchableHighlight>
                                 <View  style={styleSheet.Body.Items}><Text style={styleSheet.Body.Number}> {this.state.numb} </Text></View>
                                 <TouchableHighlight onPress={this.onPress.bind(this, 'INCREASE')}  style={styleSheet.Body.Items}>
@@ -86,7 +93,9 @@ export default class ExampleScreen02 extends React.Component {
                     </View>
 
                     <View style={[styleSheet.Footer.container]}>
-                        <Text style={styleSheet.Footer.Text}>Save Filters</Text>
+                        <TouchableHighlight onPress={this.onChangeColor.bind(this)}>
+                            <Text style={styleSheet.Footer.Text}>Save Filters</Text>
+                        </TouchableHighlight>
                     </View>
             </View>
         )

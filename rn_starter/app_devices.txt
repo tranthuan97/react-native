@@ -1,0 +1,21 @@
+﻿adb devices => kiê?m tra tâ´t ca? ca´c ma´y android dang kê´t nô´i
+
+react-native run-android --deviceId 7LEQTSWKWCBEAENV
+cd android && gradlew clean && cd .. ->android
+cd android && gradlew assembleRelease && start .\android\app\build\outputs\app && cd ..
+
+gia lap lac man hinh : adb shell input keyevent 82
+
+tai nodejs
+npm install -g react-native-cli (note: thiet lap moi truong reactnative)
+tai java jdk
+tai android studio => start run to screen up.
+window => edit the system environment => environment variables
+	=>user for <device-name>
+	=> new to add: value: android-sdk name: ANDROID_HOME and value: jdk1.8.0_171 name: JAVA_HOME
+
+
+căn giữa phần tử:
+
+justifyContent: 'center' - căn giữa theo chiều song song của flexDirection
+alignItems: 	'center' - căn giữa theo chiều vuông góc của flexDirection

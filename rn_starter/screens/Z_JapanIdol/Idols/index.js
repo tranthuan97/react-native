@@ -37,6 +37,10 @@ export default class ExampleScreen04 extends React.Component {
         }
     }
 
+    static navigationOptions = ({ navigation }) => ({
+        title: `Account`
+    });
+
     render() {
         console.log(this.state.info)
         return (
@@ -47,7 +51,7 @@ export default class ExampleScreen04 extends React.Component {
                     </View>
                     <View style={{flex: 6}}></View>
                     <View style={styleSheet.header.menuItem}>
-                        <I_Icon style={styleSheet.header.icon} name="ios-search" size={30} />
+                        <I_Icon style={styleSheet.header.icon}  name="ios-search-outline" size={30} />
                         <Text style={styleSheet.header.text}>Search</Text>
                         <Text style={{flex: 0.5}}></Text>
                     </View>

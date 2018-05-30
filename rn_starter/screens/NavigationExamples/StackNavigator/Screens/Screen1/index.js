@@ -27,10 +27,10 @@ export default class extends React.Component {
       var  password = this.props.navigation.getParam('password', 'lampn');
         return (
             <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
-                <Text
+                {/* <Text
                 style={{padding:10, backgroundColor:'gray'}}
                 onPress={this.A.bind(this)}
-                >Screen 1</Text>
+                >Screen 1</Text> */}
                 <Text>{email}</Text>
                 <Text>{password}</Text>
             </View>

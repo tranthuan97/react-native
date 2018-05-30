@@ -54,7 +54,7 @@ export default class news extends Component {
     componentWillMount(){
         this.newimg();
     }
-
+    
     render(){
         return(
                 
@@ -65,7 +65,7 @@ export default class news extends Component {
                     
                     
                     
-                    )} style={this.styles.button}>
+                    )}style={this.styles.button}>
                     <Text style={{textAlign: 'center'}}>Click Here</Text>
                     </TouchableOpacity>
 

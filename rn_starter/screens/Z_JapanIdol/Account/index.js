@@ -23,7 +23,7 @@ export default class ExampleScreen01 extends React.Component {
         return (
             <ScrollView style={[styleSheet.common.container, {backgroundColor: '#dfe6e9'}]}>
                 <View style={[styleSheet.header.container]}>
-                    <View style={styleSheet.header.headerLeft}><Icon name="close" size={40} /></View>
+                    <View style={styleSheet.header.headerLeft}><Icon  onPress={()=>this.props.navigation.navigate('Signin')} name="close" size={40} /></View>
                     <View style={styleSheet.header.headerCenter}>
                         <Text style ={styleSheet.header.text}>Account</Text>
                     </View>

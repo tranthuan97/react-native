@@ -33,13 +33,13 @@ export default class Signin extends React.Component {
             style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}
             source={{uri: 'https://i.pinimg.com/236x/66/55/1c/66551c982dcf4c4ca324fa797af2d16c--iphone-backgrounds-phone-wallpapers.jpg'}}>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                <Image source={{uri: 'http://www.downloadclipart.net/medium/73932-sakura-blossom-alice-images.png'}} style={{height: 30, width: 30}} />
-                <Text style={{color: '#ff4d4d', fontSize: 20, marginLeft: 5}}>Japanese Idols</Text>            
+                <Image source={require('./imgs/la-co.png')} style={{height: 30, width: 30}} />
+                <Text style={{color: '#ff4d4d', fontSize: 20, marginLeft: 5}}>Thần tượng âm nhạc Việt Nam</Text>            
             </View>
             <View style={{marginVertical: 50}}>
                 <Image
-                    style={{width: 300, height:200}}
-                    source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Fxemoji_u274C.svg/1024px-Fxemoji_u274C.svg.png'}}                
+                    style={{width: 250, height:200}}
+                    source={require('./imgs/music.png')}                
                 />
             </View>
             <View>

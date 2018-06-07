@@ -1,5 +1,6 @@
 import { AppRegistry } from 'react-native';
 import nav from './nav';
+import app from './App';
 import Training from './screens/TrainingScreen';
 import tester from './screens/TrainingScreen/test';
 
@@ -18,6 +19,11 @@ import jpsidols from './screens/Z_JapanIdol';
 import Signin from './screens/Z_JapanIdol/Sign_in';
 import Signup from './screens/Z_JapanIdol/Sign_in/Sign_up';
 
+import tryhard from './tryhard';
+
+AppRegistry.registerComponent('rn_starter', () => tryhard);
+
+// AppRegistry.registerComponent('rn_starter', () => app);
 // AppRegistry.registerComponent('rn_starter', () => nav);
 // AppRegistry.registerComponent('rn_starter', () => Training);
 // AppRegistry.registerComponent('rn_starter', () => tester);
@@ -30,7 +36,7 @@ import Signup from './screens/Z_JapanIdol/Sign_in/Sign_up';
 // AppRegistry.registerComponent('rn_starter', () => Discord);
 
 
-AppRegistry.registerComponent('rn_starter', () => jpsidols);
+// AppRegistry.registerComponent('rn_starter', () => jpsidols);
 // AppRegistry.registerComponent('rn_starter', () => Signin);
 // AppRegistry.registerComponent('rn_starter', () => Signup);
 
